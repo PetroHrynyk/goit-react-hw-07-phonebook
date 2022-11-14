@@ -1,6 +1,6 @@
 import style from './ContactItem.module.css';
 import { useDispatch } from 'react-redux';
-import { removeContact } from 'Redux/contactSlice';
+import { removeContact } from 'Redux/contacts-operation';
 import {TiTimes} from "react-icons/ti";
 function ContactItem({ id, name, number }) {
   const dispatch = useDispatch();
