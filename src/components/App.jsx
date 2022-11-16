@@ -5,6 +5,7 @@ import ContactList from 'components/ContactList/ContactList';
 
 import { useSelector } from 'react-redux';
 import { getError, getLoading } from 'Redux/selectors';
+import Loader from './Loader/Loader';
 
 export default function App() {
   const loading = useSelector(getLoading);
@@ -15,7 +16,7 @@ export default function App() {
       <ContactForm />
       <h3 className={style.title}>Contacts</h3>
       <Filter />
-      {loading && !error && <b>Request in progress...</b>}
+      {loading && !error && <Loader />}
       <ContactList />
     </div>
   );
